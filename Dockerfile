@@ -5,6 +5,9 @@
 # use the ubuntu base image provided by dotCloud
 FROM richarvey/nginx-php-fpm
 
+# set timezone
+RUN echo "Asia/Shanghai">/etc/timezone&&dpkg-reconfigure tzdata
+
 # enable php  mcrypt
 RUN php5enmod mcrypt
 
