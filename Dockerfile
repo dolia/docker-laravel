@@ -13,6 +13,10 @@ RUN echo "Asia/Shanghai">/etc/timezone&&dpkg-reconfigure tzdata
 # enable php  mcrypt
 RUN php5enmod mcrypt
 
+#install curl 
+
+RUN apt-get install -y curl
+
 # install nodejs
 
 RUN apt-get install -y nodejs
