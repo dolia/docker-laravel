@@ -48,3 +48,4 @@ RUN mv composer.phar /usr/local/bin/composer
 RUN apt-get -y install beanstalkd
 
 RUN  sed -i   '$a [program:beanstalkd]\ncommand=/usr/bin/beanstalkd -l 127.0.0.1 -p 11300\nautorestart=true\nstdout_events_enabled=true\nstderr_events_enabled=true'  /etc/supervisord.conf 
+CMD /start.sh
