@@ -5,6 +5,8 @@
 # use the ubuntu base image provided by dotCloud
 FROM richarvey/nginx-php-fpm
 
+atp-get update
+
 # set timezone
 RUN echo "Asia/Shanghai">/etc/timezone&&dpkg-reconfigure tzdata
 
