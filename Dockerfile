@@ -5,6 +5,10 @@
 # use the ubuntu base image provided by dotCloud
 FROM richarvey/nginx-php-fpm
 
+#fix os x boot2docker mount staff bug
+
+RUN usermod -u 1000 www-data 
+
 RUN apt-get update
 
 # set timezone
