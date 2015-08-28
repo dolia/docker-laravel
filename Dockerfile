@@ -11,6 +11,14 @@ RUN usermod -u 1000 www-data
 
 RUN apt-get update
 
+#encoding 
+
+RUN export LESSCHARSET=utf-8
+
+#replace vim 
+
+RUN apt-get install -y vim 
+
 # set timezone
 RUN echo "Asia/Shanghai">/etc/timezone&&dpkg-reconfigure tzdata
 
